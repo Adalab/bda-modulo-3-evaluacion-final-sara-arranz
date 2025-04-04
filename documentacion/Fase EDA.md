@@ -1,7 +1,7 @@
 
-## Conocimiento de los archivos
+# Conocimiento de los archivos
 
-### Archivo: Customer Loyalty History, df_clientes
+## Archivo: Customer Loyalty History, df_clientes
 
 - Contiene información de los clientes que han hecho uso de la aerolínea
 
@@ -15,7 +15,7 @@
 - Tamaño del registro = 16.737 filas y 16 columnas orignales
 
 - Revisión general:
- #   Column              Non-Null Count  Dtype  
+       Column              Non-Null Count  Dtype  
 ---  ------              --------------  -----  
  0   Loyalty Number      16737 non-null  int64      Identificador único del cliente. No tiene datos nulos y su tipo de dato es correcto
  1   Country             16737 non-null  object     País de residencia. No tiene datos nulos y su tipo de dato es correcto
@@ -85,13 +85,13 @@
 
 Finalmente se elimina la columna country ya que todos los clientes son de Canadá y se añade el símbolo del $ dado que es la moneda de eso del país de registro de los clientes.
 
-### Archivo: Customer Flight Analysis.csv, df_vuelos
+## Archivo: Customer Flight Analysis.csv, df_vuelos
 
 - Revisión general:
 
 RangeIndex: 405624 entries, 0 to 405623
 Data columns (total 10 columns):
- #   Column                       Non-Null Count   Dtype  
+        Column                       Non-Null Count   Dtype  
 ---  ------                       --------------   -----  
  0   Loyalty_Number               405624 non-null  int64  
  1   Year                         405624 non-null  int64  
@@ -104,11 +104,11 @@ Data columns (total 10 columns):
  8   Points_Redeemed              405624 non-null  int64  
  9   Dollar_Cost_Points_Redeemed  405624 non-null  int64  
 
-- Tiene una columan en común con el df_clientes: Loyalty Number
+- Tiene una columna en común con el df_clientes: Loyalty Number
 
 - Tiene duplicados
 
-       Trabajamos en la columna Loyalty Number ya que no puede tener valores duplicados al ser un dentificador_unico. Eliminamos los duplicados conservando el primer registro como cierto. De las 405.624 filas iniciales, el nuevo df sin duplicados pasa a ser de 16.737 filas.
+Los estudio y no tengo seguridad en proceder a su eliminación debido a la gran variedad de datos que se recogen de un mismo cliente en fechas diversas.
 
 - No tiene nulos
 
