@@ -4,8 +4,6 @@
 
 ## PALETAS DE COLORES DE LA LIBRERÍA SEABORN
 
-
-
 📌 1. Paletas categóricas
 
 Estas son ideales para datos cualitativos.
