@@ -14,29 +14,75 @@ En este análisis, se exploran dos conjuntos de datos relacionados con la activi
 
 - **Customer Loyalty History.csv**: Incluye información sobre el perfil de los clientes, como ubicación, estado civil, género, educación, ingresos, tipo de tarjeta de lealtad...
 
+
 ## 🔍 Fases del Proyecto
 
-### Fase 1: Exploración y Limpieza de Datos 🧹
+🧹 Fase 1: Exploración y Limpieza de Datos
 
-- **Exploración Inicial**: Inspección de datos para identificar posibles problemas como valores nulos, atípicos o faltantes.
 
-- **Limpieza de Datos**: Tratamiento de valores nulos, corrección de inconsistencias y ajustes necesarios en los datos.
+🔎 Exploración Inicial
 
-### Fase 2: Visualización de Datos 📈
+Análisis preliminar para detectar valores nulos, duplicados y posibles errores en los datos.
 
-Se realizaron diversas visualizaciones con el fin de responder preguntas específicas sobre el comportamiento de los clientes, tales como:
 
-- ¿Cómo se distribuye la cantidad de vuelos reservados por mes?
+🧽 Limpieza de Datos
 
-- ¿Existe una relación entre la distancia de los vuelos y los puntos acumulados?
+- Normalización de nombres de columnas y valores categóricos.
 
-- ¿Cuál es la distribución de los clientes por provincia o estado?
+- Conversión de tipos de datos incorrectos.
 
-- ¿Cómo se compara el salario promedio entre los diferentes niveles educativos de los clientes?
+- Imputación de valores nulos mediante estrategias como la mediana o KNN.
 
-- ¿Cuál es la proporción de clientes con diferentes tipos de tarjetas de fidelidad?
+- Separación de subconjuntos de datos (clientes activos vs. cancelaciones).
 
-- ¿Cómo se distribuyen los clientes según su estado civil y género?
+
+🗂️ Fase 2: Generación del Dataset Final
+
+- Consolidación del dataset tras la limpieza.
+
+
+📊 Fase 3: Visualización de Datos
+
+
+Se desarrollaron diversas visualizaciones para responder preguntas clave sobre el comportamiento y perfil de los clientes:
+
+
+📅 Distribución de vuelos reservados por mes.
+
+✈️ Relación entre distancia recorrida y puntos acumulados.
+
+🗺️ Distribución geográfica de clientes por provincia o ciudad.
+
+🎓 Comparación de salario promedio según el nivel educativo.
+
+💳 Proporción de clientes por tipo de tarjeta de fidelidad.
+
+👥 Análisis demográfico según género y estado civil.
+
+
+📌 Fase 4: Análisis Visual e Interpretación
+
+
+Estudio de patrones observados en una de las gráficas.
+
+Formulación de hipótesis basadas en esta visualización.
+
+Identificación de áreas de interés para análisis más profundos.
+
+
+## 📁 Estructura de Archivos
+
+📁 files = Archivos csv orignales, limpios y csv final. 
+Además de un data set que contiene todos los datos referentes a los clientes que han causado baja en su suscripción.
+
+📁 doumentación = Archivos en los que se recoge información relevante y descriptiva del trabajo relizado durante el estudio, la transformación y visualización de los datos.
+
+📁 doc_trabajo = Aquí encontramos 4 archivos que se corresponden con las fases del Proyecto desarrollado:
+
+🔎 FASE_1 = EDA
+🔎 FASE_2 = UNION
+🔎 FASE_3 = VISUALIZACIÓN
+🔎 FASE_4 = BONUS. Estudio de un patrón de datos.
 
 
 ## 🔧 Herramientas Utilizadas
@@ -51,8 +97,6 @@ Se realizaron diversas visualizaciones con el fin de responder preguntas especí
 ## 📊 Resultados
 
 Se generaron varias visualizaciones que muestran patrones significativos entre los datos, incluyendo:
-
-📊 Tipos de Gráficas Utilizadas
 
 📉 Barplot
 
@@ -84,34 +128,22 @@ Muestra una matriz de correlación visualmente.
 
 ![alt text](image-4.png)
 
-## 📁 Estructura de Archivos
 
-📁 files = Archivos csv orignales, limpios y csv final. 
-Además de un data set que contiene todos los datos referentes a los clientes que han causado baja en su suscripción.
+## 🚀 Next Steps
 
-📁 doumentación = Archivos en los que se recoge información relevante y descriptiva del trabajo relizado durante el estudio, la transformación y visualización de los datos.
 
-📁 doc_trabajo = Aquí encontramos 4 archivos que se corresponden con las fases del Proyecto desarrollado:
+♻️ Mejora de la transformación de datos y revisión de duplicados para garantizar la calidad y consistencia del dataset.
 
-    🔎 FASE_1 = EDA
-    🔎 FASE_2 = UNION
-    🔎 FASE_3 = VISUALIZACIÓN
-    🔎 FASE_4 = BONUS
+🔍 Análisis más profundo de clientes que cancelaron su suscripción (clientes_bajas.csv) para entender patrones y motivos.
 
-🚀 Next Steps
+📈 Segmentación de clientes basada en comportamiento, tipo de tarjeta.
 
-    ♻️ Mejora de la transformación de datos y revisión de duplicados para garantizar la calidad y consistencia del dataset.
-    
-    🔍 Análisis más profundo de clientes que cancelaron su suscripción (clientes_bajas.csv) para entender patrones y motivos.
+📊 Visualización avanzada de correlaciones y relaciones entre variables (por ejemplo, nivel_educativo vs frecuencia de vuelos).
 
-    📈 Segmentación de clientes basada en comportamiento, tipo de tarjeta.
+📉 Uso de hipótesis en gráficas basadas en patrones observados, para validar tendencias:
 
-    📊 Visualización avanzada de correlaciones y relaciones entre variables (por ejemplo, nivel_educativo vs frecuencia de vuelos).
+- Clientes con salario más alto canjean menos puntos.
+- Clientes con tarjetas de nivel superior acumulan más puntos por la misma distancia recorrida.
+- Clientes con tarjeta "Star" reservan más vuelos al mes que los de otras tarjetas.
 
-    📉 Uso de hipótesis en gráficas basadas en patrones observados, para validar tendencias:
-    
-        - Clientes con salario más alto canjean menos puntos.
-        - Clientes con tarjetas de nivel superior acumulan más puntos por la misma distancia recorrida.
-        - Clientes con tarjeta "Star" reservan más vuelos al mes que los de otras tarjetas.
-
-    💡 Modelado predictivo: explorar modelos que predigan cancelaciones o valor futuro del cliente.
+💡 Modelado predictivo: explorar modelos que predigan cancelaciones o valor futuro del cliente.
